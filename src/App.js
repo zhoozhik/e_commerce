@@ -47,8 +47,6 @@ const App = () => {
     fetchCart();
   }, []);
 
-console.log(cart);  
-
 return (
   <Router>   
      <div>
@@ -62,7 +60,7 @@ return (
           handleRemoveFromCart={handleRemoveFromCart}
           handleUpdateCartQty={handleUpdateCartQty}
           />}/>
-        <Route exact path = "/checkout" element = {<Checkout/>}/>
+        <Route exact path = "/checkout" element = {<Checkout cart ={cart}/>}/>
       </Routes>
     </div>
   </Router>
